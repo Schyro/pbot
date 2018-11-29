@@ -2,7 +2,6 @@ const { CommandoClient, FriendlyError, SQLiteProvider } = require('discord.js-co
 const Discord = require('discord.js');
 const moment = require('moment');
 const sqlite = require('sqlite');
-const config = require('./config.json')
 const path = require('path');
 const winston = require('winston');
 const { oneLine } = require('common-tags');
