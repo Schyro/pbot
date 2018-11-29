@@ -50,7 +50,7 @@ module.exports = class SayCommand extends Command {
                     READ_MESSAGES: true
                 });
 
-                c.setParent("507898663301808128")
+                c.setParent("511556745085321216")
                 msg.channel.send(`:white_check_mark: ***Destek kanalın oluşturuldu.***`).then(msg => {msg.delete(4500)});
 
                 const embed = new Discord.RichEmbed()
@@ -83,7 +83,7 @@ module.exports = class SayCommand extends Command {
                         READ_MESSAGES: true
                     });
 
-                    c.setParent("507898663301808128")
+                    c.setParent("511556931983376394")
                     msg.channel.send(`:white_check_mark: ***Destek kanalın oluşturuldu.***`).then(msg => {msg.delete(4500)});
     
                     const embed = new Discord.RichEmbed()
@@ -116,7 +116,7 @@ module.exports = class SayCommand extends Command {
                             READ_MESSAGES: true
                         });
 
-                        c.setParent("507898663301808128")
+                        c.setParent("511557146849050624")
                         msg.channel.send(`:white_check_mark: ***Destek kanalın oluşturuldu.***`).then(msg => {msg.delete(4500)});
         
                         const embed = new Discord.RichEmbed()
@@ -149,7 +149,7 @@ module.exports = class SayCommand extends Command {
                                 READ_MESSAGES: true
                             });
                             
-                            c.setParent("507898663301808128")
+                            c.setParent("511557369822576666")
                             msg.channel.send(`:white_check_mark: ***Destek kanalın oluşturuldu.***`).then(msg => {msg.delete(4500)});
             
                             const embed = new Discord.RichEmbed()
