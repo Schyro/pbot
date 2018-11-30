@@ -34,7 +34,7 @@ module.exports = class SayCommand extends Command {
         
         if(bolum === "1") {
             msg.guild.createChannel(`kredi-${msg.author.id}`, "text").then(c => {
-                let role = msg.guild.roles.find("name", "Support Team");
+                let role = msg.guild.roles.find("name", "Admin");
                 let role2 = msg.guild.roles.find("name", "@everyone");
 
                 c.overwritePermissions(role, {
@@ -67,7 +67,7 @@ module.exports = class SayCommand extends Command {
         } else {
             if(bolum === "2") {
                 msg.guild.createChannel(`item-${msg.author.id}`, "text").then(c => {
-                    let role = msg.guild.roles.find("name", "Support Team");
+                    let role = msg.guild.roles.find("name", "Admin");
                     let role2 = msg.guild.roles.find("name", "@everyone");
                     
                     c.overwritePermissions(role, {
@@ -100,7 +100,7 @@ module.exports = class SayCommand extends Command {
             } else {
                 if(bolum === "3") {
                     msg.guild.createChannel(`öneri-şikayet-${msg.author.id}`, "text").then(c => {
-                        let role = msg.guild.roles.find("name", "Support Team");
+                        let role = msg.guild.roles.find("name", "Admin");
                         let role2 = msg.guild.roles.find("name", "@everyone");
                     
                         c.overwritePermissions(role, {
@@ -133,7 +133,7 @@ module.exports = class SayCommand extends Command {
                 } else {
                     if(bolum === "4") {
                         msg.guild.createChannel(`diğer-${msg.author.id}`, "text").then(c => {
-                            let role = msg.guild.roles.find("name", "Support Team");
+                            let role = msg.guild.roles.find("name", "Admin");
                             let role2 = msg.guild.roles.find("name", "@everyone");
                     
                             c.overwritePermissions(role, {
