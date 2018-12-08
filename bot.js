@@ -1,6 +1,7 @@
 const { CommandoClient, FriendlyError, SQLiteProvider } = require('discord.js-commando');
 const Discord = require('discord.js');
 const moment = require('moment');
+const antispam = require("discord-anti-spam-tr");
 const sqlite = require('sqlite');
 const path = require('path');
 const winston = require('winston');
@@ -13,6 +14,19 @@ const client = new CommandoClient({
     owner: '325260517256069121',
     disableEveryone: true
 });
+
+antispam(client, {
+    uyarmaSınırı: 2, //Uyarılmadan önce aralıkta gönderilmesine izin verilen maksimum mesaj miktarı.
+    aralık: 1000, // ms kullanıcılarda zaman miktarı, yasaklanmadan önce aralık değişkeninin maksimumunu gönderebilir.
+    uyarmaMesajı: "Lütfen yavaş bir şekilde yaz.", // Uyarı mesajı, kullanıcıya hızlı gideceklerini belirten kullanıcıya gönderilir..
+    maxSpamUyarı: 5,//Bir kullanıcının uyarılmadan önce bir zaman dilimi içinde gönderebileceği maksimum kopya sayısı
+    maxSpamBan: 5, //mute
+    zaman: 10, // Spamdan sonraki zaman
+    rolİsimi: "Muted", // Spam Atan Kullanıcılar Verilecek Röl
+    muteTime: "15m", //ms Susturulma zamanı
+    logChannel: "424947394958983168", //Log kanalı
+    geçersizRol: ["Owner", "Genel Admin", "Admin", "Moderatör", "TestMod", "Discord Sorumlusu", "Discord Sr. Yrd."]
+  });
 
 /*/client.on("message", (message, err) => {
     if(message.channel.id === "505007689689202729") {
